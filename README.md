@@ -16,5 +16,4 @@ This project showcases a **simple yet smart AI logic** for personalized beauty p
 
 1️⃣ **Clone or download** this project  
 ```bash
-git clone https://github.com/yourusername/K-Beauty_AI_Store.git
-cd K-Beauty_AI_Store
+github: https://github.com/KomalBaloch/K-Beauty_AI_Store
