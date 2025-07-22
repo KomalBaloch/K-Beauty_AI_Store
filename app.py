@@ -9,7 +9,6 @@ from pathlib import Path
 def local_css():
     st.markdown("""
         <style>
-        /* Import elegant Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap');
 
         /* Overall App Background */
@@ -20,7 +19,7 @@ def local_css():
 
         /* Hero Section Styling */
         .hero-section {
-            background: linear-gradient(135deg, #d81b60, #880e4f); /* deep pink gradient */
+            background: linear-gradient(135deg, #d81b60, #880e4f);
             padding: 40px 20px;
             text-align: center;
             border-radius: 12px;
@@ -30,19 +29,19 @@ def local_css():
         .hero-section h1 {
             font-family: 'Playfair Display', serif;
             font-size: 44px;
-            color: #fff; /* White text for title */
+            color: #fff;
             font-weight: 700;
             margin-bottom: 12px;
         }
 
         .hero-section p {
             font-size: 18px;
-            color: #fce4ec; /* soft pastel undertext */
+            color: #fce4ec;
             max-width: 650px;
             margin: auto;
         }
 
-        /* Trolley Icon Styling */
+        /* Trolley Icon */
         .trolley-icon {
             font-size: 60px;
             display: block;
@@ -58,7 +57,7 @@ def local_css():
             margin: 30px 0 20px 0;
         }
 
-        /* Product Card Styling */
+        /* Product Card */
         .product-card {
             background: #ffffff;
             padding: 20px;
@@ -101,7 +100,7 @@ def local_css():
             margin: 20px 0;
         }
 
-        /* Disable hover link cursor on headings/images */
+        /* Disable hover link cursor */
         img, .stImage, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
             pointer-events: none !important;
             cursor: default !important;
@@ -111,29 +110,16 @@ def local_css():
             user-drag: none;
         }
 
-        /* ✅ Premium Dropdown (Selectbox) Styling - Black Text */
+        /* Custom Dropdown (Selectbox) Styling */
         div[data-baseweb="select"] > div {
-            background-color: #fff5f9 !important; /* soft pale pink background */
+            background-color: #f8e1f1 !important;
             border-radius: 10px;
-            border: 1px solid #d81b60 !important; /* deep pink border */
-            color: #000000 !important; /* black text for selected value */
+            border: 1px solid #e1a4c6 !important;
+            color: #6a1b9a !important; /* purple text */
             font-weight: 500;
         }
         div[data-baseweb="select"] svg {
-            fill: #d81b60; /* deep pink dropdown arrow */
-        }
-
-        /* ✅ Dropdown Menu Options Styling */
-        ul[role="listbox"] {
-            background-color: #fff0f6 !important; /* light soft pink */
-        }
-        ul[role="listbox"] li {
-            color: #d81b60 !important;  /* deep pink text for dropdown options */
-            font-weight: 500;
-            font-family: 'Poppins', sans-serif;
-        }
-        ul[role="listbox"] li:hover {
-            background: #fce4ec !important; /* soft pink highlight on hover */
+            fill: #8e24aa; /* purple dropdown arrow */
         }
         </style>
     """, unsafe_allow_html=True)
@@ -156,7 +142,6 @@ def show_product_cards(df):
         img_width = int(row["image_width"]) if "image_width" in row and pd.notna(row["image_width"]) else 200
 
         col1, col2 = st.columns([1, 2])
-
         with col1:
             if img_path.exists():
                 st.image(str(img_path), width=img_width)
@@ -191,7 +176,7 @@ def main():
     st.set_page_config(page_title="K-Beauty AI Store", page_icon="💄", layout="wide")
     local_css()
 
-    # === Hero Section with deep pink gradient ===
+    # === Hero Section ===
     st.markdown("""
         <div class="hero-section">
             <div class="trolley-icon">🛍️</div>
@@ -210,18 +195,20 @@ def main():
     st.markdown('<div class="featured-title">✨ Featured Makeup Collection</div>', unsafe_allow_html=True)
     show_product_cards(df)
 
-    # === SELECTION FOR AI RECOMMENDATIONS ===
+    # === Recommendation Section ===
     st.markdown("---")
     st.markdown('<div class="featured-title">🔍 Find Similar Products</div>', unsafe_allow_html=True)
 
-    # ✅ Always reset on refresh (no session memory)
+    # ✅ Dropdown with a dummy option for old Streamlit
+    product_list = ["-- Select a product --"] + df["name"].tolist()
     selected_product = st.selectbox(
         "Choose a product you like:",
-        df["name"].tolist()
+        product_list,
+        index=0  # always default to dummy option
     )
 
-    # ✅ Show recommendations immediately for current selection
-    if selected_product:
+    # ✅ Show recommendations ONLY if user selects a valid product
+    if selected_product != "-- Select a product --":
         st.markdown(f"<div class='rec-header'>Similar to <b>{selected_product}</b></div>", unsafe_allow_html=True)
         recommendations = get_recommendations(df, selected_product)
         if not recommendations.empty:
@@ -244,7 +231,6 @@ def main():
             """, unsafe_allow_html=True)
 
     st.markdown("---")
-    # ✅ Built by Komal at the very end
     st.markdown(
         "<p style='text-align:center; font-size:14px; color:#6a1b9a;'>© 2025 K-Beauty Labs | Built by <b>Komal</b></p>",
         unsafe_allow_html=True
