@@ -5,7 +5,9 @@
     "category": "Lips",
     "description": "A long-lasting matte lipstick with a smooth velvet finish.",
     "rating": 4.5,
-    "image": "images/1.jpg"
+    "image": "images/1.jpg",
+    "image_width": 160
+    
   },
   {
     "name": "Hydra Glow Foundation",
@@ -13,7 +15,8 @@
     "category": "Face",
     "description": "Lightweight foundation for a radiant dewy finish.",
     "rating": 4.7,
-    "image": "images/2.jpg"
+    "image": "images/2.jpg",
+    "image_width": 160
   },
   {
     "name": "Rose Petal Blush",
@@ -21,7 +24,8 @@
     "category": "Cheeks",
     "description": "Soft blush with a natural rVelvet Matte Lipstickosy glow, perfect for all skin tones.",
     "rating": 4.6,
-    "image": "images/3.jpg"
+    "image": "images/3.jpg",
+    "image_width": 160
   },
   {
     "name": "Shimmer Eyeshadow Palette",
@@ -29,7 +33,8 @@
     "category": "Eyes",
     "description": "12 shades of silky shimmer shadows for endless eye looks.",
     "rating": 4.8,
-    "image": "images/4.jpg"
+    "image": "images/4.jpg",
+    "image_width": 160
   },
   {
     "name": "Luminous Highlighter Stick",
@@ -37,7 +42,8 @@
     "category": "Face",
     "description": "Creamy highlighter for a natural, glowing finish.",
     "rating": 4.4,
-    "image": "images/5.jpg"
+    "image": "images/5.jpg",
+    "image_width": 160
   },
   {
     "name": "Silk Finish Compact Powder",
@@ -45,7 +51,8 @@
     "category": "Face",
     "description": "Ultra-fine powder for a soft, matte finish all day.",
     "rating": 4.5,
-    "image": "images/6.jpg"
+    "image": "images/6.jpg",
+    "image_width": 160
   },
   {
     "name": "Glossy Shine Lip Gloss",
@@ -53,7 +60,8 @@
     "category": "Lips",
     "description": "Hydrating lip gloss with high shine and a hint of color.",
     "rating": 4.3,
-    "image": "images/7.jpg"
+    "image": "images/7.jpg",
+    "image_width": 160
   },
   {
     "name": "Precision Liquid Eyeliner",
@@ -61,7 +69,8 @@
     "category": "Eyes",
     "description": "Smudge-proof liquid eyeliner with ultra-fine tip for perfect lines.",
     "rating": 4.6,
-    "image": "images/8.jpg"
+    "image": "images/8.jpg",
+    "image_width": 160
   },
   {
     "name": "Volume Boost Mascara",
@@ -69,7 +78,8 @@
     "category": "Eyes",
     "description": "Adds dramatic volume and length with a clump-free formula.",
     "rating": 4.7,
-    "image": "images/9.jpg"
+    "image": "images/9.jpg",
+    "image_width": 160
   },
   {
     "name": "Creamy Concealer Stick",
@@ -77,7 +87,8 @@
     "category": "Face",
     "description": "Full coverage concealer with a smooth, blendable texture.",
     "rating": 4.5,
-    "image": "images/10.jpg"
+    "image": "images/10.jpg",
+    "image_width": 160
   },
   {
     "name": "Soft Glow Makeup Primer",
@@ -85,7 +96,8 @@
     "category": "Face",
     "description": "Hydrating primer that smooths skin for flawless makeup application.",
     "rating": 4.4,
-    "image": "images/11.jpg"
+    "image": "images/11.jpg",
+    "image_width": 160
   },
   {
     "name": "Classic Red Nail Polish",
@@ -93,6 +105,7 @@
     "category": "Nails",
     "description": "Long-lasting high-gloss red nail color for timeless elegance.",
     "rating": 4.6,
-    "image": "images/12.jpg"
+    "image": "images/12.jpg",
+    "image_width": 160
   }
 ]

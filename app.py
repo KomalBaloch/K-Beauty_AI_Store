@@ -39,7 +39,7 @@ def local_css():
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .product-title {
             font-family: 'Playfair Display', serif;
@@ -68,6 +68,14 @@ def local_css():
             margin: 30px 0 15px 0;
         }
 
+        /* Divider line */
+        hr {
+            border: none;
+            height: 1px;
+            background: #f3c4d3;
+            margin: 20px 0;
+        }
+
         /* Sidebar text */
         .css-1d391kg, .css-1v3fvcr {
             font-family: 'Poppins', sans-serif;
@@ -85,28 +93,38 @@ def load_products(file_path: str):
     return pd.DataFrame(data)
 
 # ========================
-# Show Products with Local Images
+# Show Products with Local Images & Adjustable Sizes
 # ========================
 def show_product_cards(df):
     for _, row in df.iterrows():
-        # ✅ Absolute path for local image
-        img_path = Path(row["image"]).resolve()
-        
-        if img_path.exists():
-            st.image(str(img_path), width=170)  # fixed width for better layout
-        else:
-            st.warning(f"⚠️ Image not found: {img_path}")
-        
-        # Product details
-        st.markdown(f"""
-        <div class="product-card">
-            <div class="product-title">{row['name']} – {row['price']}</div>
-            <div class="product-meta">
-                <b>Category:</b> {row['category']} | ⭐ {row['rating']} / 5
+        img_path = Path(row["image"])
+
+        # ✅ If image_width is missing, use default 200
+        img_width = int(row["image_width"]) if "image_width" in row and pd.notna(row["image_width"]) else 200
+
+        col1, col2 = st.columns([1, 2])
+
+        # ✅ LEFT: Product Image
+        with col1:
+            if img_path.exists():
+                st.image(str(img_path), width=img_width)
+            else:
+                st.warning(f"⚠️ Image not found: {img_path}")
+
+        # ✅ RIGHT: Product Details
+        with col2:
+            st.markdown(f"""
+            <div class="product-card">
+                <div class="product-title">{row['name']} – {row['price']}</div>
+                <div class="product-meta">
+                    <b>Category:</b> {row['category']} | ⭐ {row['rating']} / 5
+                </div>
+                <div class="product-desc">{row['description']}</div>
             </div>
-            <div class="product-desc">{row['description']}</div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+
+        # ✅ Soft divider between products
+        st.markdown("<hr>", unsafe_allow_html=True)
 
 # ========================
 # Recommendation Logic
@@ -153,7 +171,7 @@ def main():
 
     # === Selection for AI Recommendations ===
     st.markdown("---")
-    st.markdown("## Find Similar Products")
+    st.markdown("## 🔍 Find Similar Products")
     selected_product = st.selectbox("Choose a product you like:", df["name"].tolist())
     
     if selected_product:
