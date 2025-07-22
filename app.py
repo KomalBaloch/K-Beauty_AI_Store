@@ -181,7 +181,23 @@ def main():
         if not recommendations.empty:
             show_product_cards(recommendations)
         else:
-            st.info("No similar products found in this collection.")
+            # ✅ Custom styled visible info box
+            st.markdown("""
+                <div style="
+                    background: #ffe4ec; 
+                    color: #880e4f; 
+                    padding: 15px; 
+                    border-radius: 12px; 
+                    text-align: center; 
+                    font-size: 16px; 
+                    font-weight: 500;
+                    border: 1px solid #f5b7c5;
+                    max-width: 500px;
+                    margin: 15px auto;
+                ">
+                💡 No other products available in this category.<br>Try exploring another one!
+                </div>
+            """, unsafe_allow_html=True)
     
     st.markdown("---")
     st.caption("© 2025 K-Beauty Labs | Created by Komal for AI Developer Test")
