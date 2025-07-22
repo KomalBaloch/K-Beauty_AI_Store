@@ -100,17 +100,7 @@ def local_css():
             margin: 20px 0;
         }
 
-        /* Disable hover link cursor */
-        img, .stImage, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
-            pointer-events: none !important;
-            cursor: default !important;
-        }
-        img {
-            -webkit-user-drag: none;
-            user-drag: none;
-        }
-
-        /* Custom Dropdown (Selectbox) Styling */
+        /* Dropdown container */
         div[data-baseweb="select"] > div {
             background-color: #f8e1f1 !important;
             border-radius: 10px;
@@ -118,10 +108,42 @@ def local_css():
             color: #6a1b9a !important; /* purple text */
             font-weight: 500;
         }
+        /* Dropdown arrow */
         div[data-baseweb="select"] svg {
-            fill: #8e24aa; /* purple dropdown arrow */
+            fill: #8e24aa;
+        }
+        /* Dropdown LIST (inside options color) */
+        ul[role="listbox"] li {
+            background: #fff0f6 !important;  /* light pink option background */
+            color: #4a148c !important;       /* deep purple text */
+            font-weight: 500 !important;
+        }
+        ul[role="listbox"] li:hover {
+            background: #f8bbd0 !important;  /* darker hover pink */
+            color: #6a1b9a !important;       /* purple hover text */
         }
         </style>
+    """, unsafe_allow_html=True)
+
+# ========================
+# Save & Restore Scroll Position
+# ========================
+def save_scroll_js():
+    st.markdown("""
+        <script>
+        // Save scroll position before refresh
+        window.addEventListener("beforeunload", function () {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        });
+
+        // Restore scroll position after refresh
+        window.addEventListener("load", function () {
+            let scrollY = localStorage.getItem("scrollPosition");
+            if (scrollY !== null) {
+                window.scrollTo(0, parseInt(scrollY));
+            }
+        });
+        </script>
     """, unsafe_allow_html=True)
 
 # ========================
@@ -175,6 +197,7 @@ def get_recommendations(df, selected_product):
 def main():
     st.set_page_config(page_title="K-Beauty AI Store", page_icon="💄", layout="wide")
     local_css()
+    save_scroll_js()  # ✅ Enable scroll memory
 
     # === Hero Section ===
     st.markdown("""
