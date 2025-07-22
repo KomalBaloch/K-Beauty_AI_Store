@@ -1,0 +1,87 @@
+[
+  { 
+    "name": "Velvet Matte Lipstick", 
+    "price": "$15", 
+    "category": "Lips", 
+    "description": "Highly pigmented matte lipstick with 12-hour wear, enriched with vitamin E for smooth application.", 
+    "rating": 4.7 
+  },
+  { 
+    "name": "Crystal Shine Lip Gloss", 
+    "price": "$12", 
+    "category": "Lips", 
+    "description": "Hydrating lip gloss with a glossy finish and subtle shimmer, perfect for daily wear.", 
+    "rating": 4.5 
+  },
+  { 
+    "name": "Hydra Care Lip Balm", 
+    "price": "$8", 
+    "category": "Lips", 
+    "description": "Moisturizing lip balm with SPF 15, nourishes and protects lips from dryness.", 
+    "rating": 4.4 
+  },
+  { 
+    "name": "Flawless Liquid Foundation", 
+    "price": "$30", 
+    "category": "Face", 
+    "description": "Full coverage lightweight foundation with SPF 25, suitable for all skin types and provides a natural glow.", 
+    "rating": 4.8 
+  },
+  { 
+    "name": "Silk Finish Compact Powder", 
+    "price": "$18", 
+    "category": "Face", 
+    "description": "Oil-control compact powder with a silky smooth texture, sets makeup and reduces shine.", 
+    "rating": 4.6 
+  },
+  { 
+    "name": "Natural Glow Blush Stick", 
+    "price": "$14", 
+    "category": "Face", 
+    "description": "Creamy blush stick that blends seamlessly for a natural rosy glow.", 
+    "rating": 4.4 
+  },
+  { 
+    "name": "Radiance Highlighter Palette", 
+    "price": "$22", 
+    "category": "Face", 
+    "description": "3-in-1 highlighter palette for a radiant, glowing finish on cheeks and eyes.", 
+    "rating": 4.6 
+  },
+  { 
+    "name": "Dramatic Volume Mascara", 
+    "price": "$20", 
+    "category": "Eyes", 
+    "description": "Waterproof mascara that adds dramatic volume and length without clumping.", 
+    "rating": 4.7 
+  },
+  { 
+    "name": "Glam Eyeshadow Palette", 
+    "price": "$25", 
+    "category": "Eyes", 
+    "description": "12 richly pigmented shades with matte & shimmer finishes for versatile looks.", 
+    "rating": 4.6 
+  },
+  { 
+    "name": "Precision Eyeliner Pen", 
+    "price": "$10", 
+    "category": "Eyes", 
+    "description": "Long-lasting waterproof eyeliner pen with a fine tip for precise application.", 
+    "rating": 4.5 
+  },
+  { 
+    "name": "Soothing Makeup Remover", 
+    "price": "$16", 
+    "category": "Skin", 
+    "description": "Gentle, alcohol-free makeup remover that hydrates while cleansing.", 
+    "rating": 4.5 
+  },
+  { 
+    "name": "Hydrating Face Primer", 
+    "price": "$28", 
+    "category": "Skin", 
+    "description": "Silicone-free primer that blurs pores and hydrates skin for smooth makeup application.", 
+    "rating": 4.7 
+  }
+]
+    
