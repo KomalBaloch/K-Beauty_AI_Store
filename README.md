@@ -1,18 +1,56 @@
-# K-Beauty AI Store  
+# K-Beauty AI Store
 
-Welcome to **K‑Beauty AI Store**, an AI-powered makeup recommendation web app built with **Streamlit**.  
-This project showcases a **simple yet smart AI logic** for personalized beauty product recommendations.  
+A **Streamlit-based beauty store** where users can:  
+✅ Filter products by **category** & **price**  
+✅ View **premium product cards** with images & details  
+✅ Get **smart recommendations** for similar products  
 
-##  Features  
+---
 
-✅ **12 curated makeup products** – with detailed info (name, price, category, description, rating)  
-✅ **AI-powered recommendations** – suggests similar products by category  
-✅ **Clean Streamlit UI** – easy to use, minimal design  
-✅ **Fast setup** – runs locally in minutes  
+## 🛠️ Tech Stack & Libraries  
+
+- **Python 3.9+**  
+- **Streamlit** → Interactive web app  
+- **Pandas** → Data handling for product catalog  
+- **JSON** → Product data storage (`products.json`)  
+- **Pathlib** → Local image handling  
+- **Custom CSS + Google Fonts** → Premium UI design  
+
+---
+
+## 📂 Project Structure  
+
+kbeauty_ai_store/
+├── app.py # Main Streamlit application
+├── products.json # Product catalog
+├── images/ # Local product images
+└── README.md # Documentation
 
 
-## 🚀 How to Run  
+---
 
-1️⃣ **Clone or download** this project  
-```bash
-github: https://github.com/KomalBaloch/K-Beauty_AI_Store
+## ✅ Assumptions  
+
+- Product data is stored in `products.json` in **this format**:  
+
+```json
+[
+  {
+    "name": "Velvet Lipstick",
+    "price": "$20",
+    "category": "Lips",
+    "rating": 4.6,
+    "description": "Matte finish lipstick with long-lasting color.",
+    "image": "images/lipstick.jpg",
+    "image_width": 200
+  },
+  {
+    "name": "Hydrating Foundation",
+    "price": "$35",
+    "category": "Face",
+    "rating": 4.8,
+    "description": "Lightweight foundation with 24-hour hydration.",
+    "image": "images/foundation.jpg",
+    "image_width": 220
+  }
+]
