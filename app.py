@@ -84,6 +84,7 @@ def local_css():
             word-break: break-word;
             margin-bottom: 0px;
            font-size: 14px;
+           color: black;
         
         }
         .css-8ojfln {
