@@ -57,10 +57,9 @@ kbeauty_ai_store/
     "image": "images/foundation.jpg",
     "image_width": 220
   }
-]
+``` 
 
 ---
-
 ## ✅ Blockchain Integration (Future Scope)
 
 In the future, this project can be enhanced with **Blockchain** to ensure transparency and authenticity in the beauty product supply chain.
@@ -80,3 +79,6 @@ In the future, this project can be enhanced with **Blockchain** to ensure transp
 - **Metamask Wallet** → For secure authentication
 
 This will make the store **tamper-proof** and **build customer trust** by ensuring every product is verified on-chain.
+
+
+
