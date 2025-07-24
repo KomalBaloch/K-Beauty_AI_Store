@@ -9,7 +9,6 @@ This project showcases a **simple yet smart AI logic** for personalized beauty p
 ✅ **AI-powered recommendations** – suggests similar products by category  
 ✅ **Clean Streamlit UI** – easy to use, minimal design  
 ✅ **Fast setup** – runs locally in minutes  
-✅ **Future-ready** – can integrate with blockchain or advanced NLP search  
 
 
 ## 🚀 How to Run  

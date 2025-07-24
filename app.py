@@ -33,7 +33,9 @@ def local_css():
             font-weight: 700;
             margin-bottom: 12px;
         }
-
+        .css-15zrgzn {
+            display: none !important;
+        }
         .hero-section p {
             font-size: 18px;
             color: #fce4ec;
@@ -91,7 +93,17 @@ def local_css():
             font-size: 26px;
             margin: 30px 0 15px 0;
         }
+        .css-8ojfln {
+            font-weight: 500 !important;
+            color: rgba(250, 250, 250, 0.6) !important;
+        }
 
+        /* Hover effect for dropdown list items */
+        .css-8ojfln:hover {
+            background-color: #f8bbd0 !important; /* slightly darker pink on hover */
+            color: #6a1b9a !important;            /* purple hover text */
+        }
+                
         /* Divider line */
         hr {
             border: none;
@@ -99,24 +111,27 @@ def local_css():
             background: #f3c4d3;
             margin: 20px 0;
         }
+        /* Force selectbox dropdown to open downward */
+        div[data-baseweb="popover"] {
+            top: 15px !important;            /* Reset top */
+            bottom: auto !important;         /* Reset bottom */
+            left: 50% !important;            /* Move horizontally to center */
+            transform: translate(-50%, 100%) !important; /* Center + push downward */
+            margin: 0 auto !important;       /* Extra centering */
+}
+
 
         /* Dropdown container */
         div[data-baseweb="select"] > div {
-            background-color: #f8e1f1 !important;
+            background-color: #f8e1f1;
             border-radius: 10px;
-            border: 1px solid #e1a4c6 !important;
-            color: #6a1b9a !important; /* purple text */
+            border: 1px solid #e1a4c6 ;
+            color: #6a1b9a ; /* purple text */
             font-weight: 500;
         }
         /* Dropdown arrow */
         div[data-baseweb="select"] svg {
             fill: #8e24aa;
-        }
-        /* Dropdown LIST (inside options color) */
-        ul[role="listbox"] li {
-            background: #fff0f6 !important;  /* light pink option background */
-            color: #4a148c !important;       /* deep purple text */
-            font-weight: 500 !important;
         }
         ul[role="listbox"] li:hover {
             background: #f8bbd0 !important;  /* darker hover pink */
