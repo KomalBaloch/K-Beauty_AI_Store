@@ -56,7 +56,7 @@ kbeauty_ai_store/
     "description": "Lightweight foundation with 24-hour hydration.",
     "image": "images/foundation.jpg",
     "image_width": 220
-  }
+  }]
 ``` 
 
 ---
