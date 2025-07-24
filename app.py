@@ -11,11 +11,7 @@ def local_css():
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap');
 
-        /* Overall App Background */
-        .stApp {
-            background: linear-gradient(180deg, #fff8fb, #fff5f9);
-            font-family: 'Poppins', sans-serif;
-        }
+        
 
         /* Hero Section Styling */
         .hero-section {
@@ -84,7 +80,7 @@ def local_css():
             word-break: break-word;
             margin-bottom: 0px;
            font-size: 14px;
-           color: black;
+           color: hotpink;
         
         }
         .css-8ojfln {
