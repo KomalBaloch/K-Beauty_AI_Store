@@ -92,7 +92,7 @@ def local_css():
         }
         .st-c7 {
            padding-right: 0.5rem;
-           background: linear-gradient(135deg, #d81b60, #880e4f);
+           
         }
         .product-desc {
             font-size: 15px;
@@ -102,7 +102,7 @@ def local_css():
 
         /* Recommendation Section Header */
         .rec-header {
-            color: #ad1457;
+            
             text-align: center;
             font-family: 'Playfair Display', serif;
             font-size: 26px;
