@@ -84,11 +84,11 @@ def local_css():
             word-break: break-word;
             margin-bottom: 0px;
            font-size: 14px;
-           color: #ad1457;
+        
         }
         .css-8ojfln {
            display: table-cell;
-           color: hotpink;
+           
         }
         .st-c7 {
            padding-right: 0.5rem;
@@ -110,7 +110,7 @@ def local_css():
         }
     .css-nahz7x p {
             word-break: break-word;
-            color: lightpink;
+            
         }
     .st-e5 {
             background-color: rgb(0 0 0 / 80%);
