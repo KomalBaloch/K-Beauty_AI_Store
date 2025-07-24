@@ -22,8 +22,11 @@ A **Streamlit-based beauty store** where users can:
 
 kbeauty_ai_store/
 ├── app.py # Main Streamlit application
-├── products.json # Product catalog
+
+├── products.json # Product catalog\
+
 ├── images/ # Local product images
+
 └── README.md # Documentation
 
 
